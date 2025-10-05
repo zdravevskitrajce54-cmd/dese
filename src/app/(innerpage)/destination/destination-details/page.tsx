@@ -9,7 +9,7 @@ const page = () => {
         bgimg="/assets/img/breadcrumb/breadcrumb.jpg"
         Title="Destination Details"
       ></BreadCumb>
-      <DestinationDetails></DestinationDetails>
+      <DestinationDetails destination={undefined}></DestinationDetails>
     </div>
   );
 };
