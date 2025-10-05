@@ -5,13 +5,13 @@ import destinations from "../../../Components/Destination/data/destination";
 
 interface PageProps {
   params: {
-    "destination-details": string;
+    destination: string;
   };
 }
 
 const page = ({ params }: PageProps) => {
   // Get the destination name from the URL parameter
-  const destinationName = decodeURIComponent(params["destination-details"]);
+  const destinationName = decodeURIComponent(params["destination"]);
 
   // Find the destination data from all categories
   let destinationData = null;
