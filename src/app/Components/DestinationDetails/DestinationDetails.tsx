@@ -10,6 +10,8 @@ export interface DestinationDetailsProps {
 }
 
 const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
+  const [openDay, setOpenDay] = useState<number | null>(null);
+
   if (!destination) {
     return <p>No destination selected</p>;
   }
@@ -44,10 +46,6 @@ const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
                     </h3>
                     <ul className="list-unstyled">
                       {destination.planProgram.map((day) => {
-                        const [openDay, setOpenDay] = useState<number | null>(
-                          null
-                        );
-
                         return (
                           <li key={day.day} className="mb-3 border-b pb-2">
                             <button
