@@ -10,7 +10,6 @@ interface PageProps {
 }
 
 const page = ({ params }: PageProps) => {
-  // Get the destination name from the URL parameter
   const destinationName = decodeURIComponent(params["destination-details"]);
 
   // Find the destination data from all categories
