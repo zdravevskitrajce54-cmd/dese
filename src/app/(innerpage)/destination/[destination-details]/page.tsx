@@ -3,15 +3,16 @@ import BreadCumb from "../../../Components/Common/BreadCumb";
 import DestinationDetails from "../../../Components/DestinationDetails/DestinationDetails";
 import destinations from "../../../Components/Destination/data/destination";
 
-interface PageProps {
-  params: {
-    destinationDetails: string;
-  };
-}
+const page = async ({
+  params,
+}: {
+  params: Promise<{ destinationDetails: string }>;
+}) => {
+  const { destinationDetails } = await params;
+  // Get the destination name from the URL parameter
+  const destinationName = decodeURIComponent(destinationDetails);
 
-const Page = ({ params }: PageProps) => {
-  const destinationName = decodeURIComponent(params.destinationDetails);
-
+  // Find the destination data from all categories
   let destinationData = null;
   for (const category in destinations) {
     const found = destinations[category as keyof typeof destinations].find(
@@ -28,10 +29,11 @@ const Page = ({ params }: PageProps) => {
       <BreadCumb
         bgimg="https://fastly.picsum.photos/id/866/1920/410.jpg?hmac=Ukosc-acEFYInP7MRtnJi0_BQfs8RiU2JBoTv_RPKuM"
         Title={destinationData ? destinationData.name : "Destination Details"}
-      />
-      <DestinationDetails destination={destinationData} />
+      ></BreadCumb>
+
+      <DestinationDetails destination={destinationData}></DestinationDetails>
     </div>
   );
 };
 
-export default Page;
+export default page;
