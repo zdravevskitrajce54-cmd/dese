@@ -9,11 +9,9 @@ interface PageProps {
   };
 }
 
-const page = ({ params }: PageProps) => {
-  // Get the destination name from the URL parameter
+const Page = ({ params }: PageProps) => {
   const destinationName = decodeURIComponent(params.destinationDetails);
 
-  // Find the destination data from all categories
   let destinationData = null;
   for (const category in destinations) {
     const found = destinations[category as keyof typeof destinations].find(
@@ -30,11 +28,10 @@ const page = ({ params }: PageProps) => {
       <BreadCumb
         bgimg="https://fastly.picsum.photos/id/866/1920/410.jpg?hmac=Ukosc-acEFYInP7MRtnJi0_BQfs8RiU2JBoTv_RPKuM"
         Title={destinationData ? destinationData.name : "Destination Details"}
-      ></BreadCumb>
-
-      <DestinationDetails destination={destinationData}></DestinationDetails>
+      />
+      <DestinationDetails destination={destinationData} />
     </div>
   );
 };
 
-export default page;
+export default Page;
