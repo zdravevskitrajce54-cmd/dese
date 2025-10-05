@@ -4,13 +4,14 @@ import DestinationDetails from "../../../Components/DestinationDetails/Destinati
 import destinations from "../../../Components/Destination/data/destination";
 
 interface PageProps {
-  params: {
-    "destination-details": string;
-  };
+  params: Promise<{ "destination-details": string }>;
 }
 
-const page = ({ params }: PageProps) => {
-  const destinationName = decodeURIComponent(params["destination-details"]);
+const page = async ({ params }: PageProps) => {
+  const resolvedParams = await params;
+  const destinationName = decodeURIComponent(
+    resolvedParams["destination-details"]
+  );
 
   // Find the destination data from all categories
   let destinationData = null;
