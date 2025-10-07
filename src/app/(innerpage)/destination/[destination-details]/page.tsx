@@ -28,7 +28,7 @@ const page = async ({ params }: PageProps) => {
   return (
     <div>
       <BreadCumb
-        bgimg="https://fastly.picsum.photos/id/866/1920/410.jpg?hmac=Ukosc-acEFYInP7MRtnJi0_BQfs8RiU2JBoTv_RPKuM"
+        bgimg={destinationData?.bigImg || ""}
         Title={destinationData ? destinationData.name : "Destination Details"}
       ></BreadCumb>
 

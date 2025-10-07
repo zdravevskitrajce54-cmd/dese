@@ -24,19 +24,21 @@ const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
             {/* MAIN CONTENT */}
             <div className="col-lg-8">
               <div className="destination-details-items">
-                {/* Hero image
+                {/* {/* Hero image */}
                 <div className="details-image mb-4">
                   <img
-                    src={destination.bigImg || destination.img}
+                    src={destination.img}
                     alt={destination.name}
                     width={856}
                     height={550}
                   />
-                </div> */}
+                </div>
                 {/* About */}
                 <div className="details-content">
                   <h2>{destination.slogan}</h2>
-                  <p className="mt-3">{destination.about}</p>
+                  <p className="mt-3 whitespace-pre-line">
+                    {destination.about}
+                  </p>
                 </div>
                 {/* Plan & Program */}
                 {destination.planProgram?.length > 0 && (
@@ -63,7 +65,7 @@ const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
                             </button>
 
                             {openDay === day.day && (
-                              <p className="mt-2 text-gray-700">
+                              <p className="mt-2 text-gray-700 whitespace-pre-line">
                                 {day.details}
                               </p>
                             )}
