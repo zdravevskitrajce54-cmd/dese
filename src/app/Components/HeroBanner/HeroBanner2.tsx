@@ -9,32 +9,64 @@ const HeroBanner2 = () => {
 
   const [isActive, setIsActive] = useState("tour");
 
+  const images = [
+    "/assets/Images/Bali/1.jpg",
+    "/assets/Images/Maldives/11.jpg",
+    "/assets/Images/Colombia/2.jpg",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 6500); // 10 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section className="hero-section-2">
-      <div
-        className="hero-2 bg-cover"
-        data-background="/assets/img/hero/hero2.jpg"
-      >
-        <div className="container custom-container-3">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="hero-content">
-                <div className="sub-title wow fadeInUp">
-                  Doživite nezaboravno zadovoljstvo sa nama
+      <div className="relative w-full h-[100vh] overflow-hidden">
+        {/* Slider wrapper */}
+        <div
+          className="flex transition-transform duration-1000 ease-in-out h-full"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
+          {images.map((src, idx) => (
+            <div
+              key={idx}
+              className="w-full h-full flex-shrink-0 bg-center bg-cover"
+              style={{ backgroundImage: `url(${src})` }}
+            >
+              {/* Dark overlay */}
+              <div className="w-full h-full bg-black/40 flex items-center">
+                <div className="container custom-container-3 text-white">
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="hero-content">
+                        <div className="sub-title">
+                          Doživite nezaboravno zadovoljstvo sa nama
+                        </div>
+                        <h1 className="mt-4 text-4xl font-bold leading-tight">
+                          Otkrijte svoje sledeće <br />
+                          pažljivo odabrano putovanje
+                        </h1>
+                        <p className="mt-4 text-lg">
+                          There are many variations of passages available, but
+                          the majority have suffered alteration in some form, by
+                          injected humour words which do not look even slightly
+                          believable.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h1 className="wow fadeInUp" data-wow-delay=".3s">
-                  Otkrijte svoje sledeće <br />
-                  pažljivo odabrano putovanje
-                </h1>
-                <p className="wow fadeInUp" data-wow-delay=".5s">
-                  There are many variations of passages of available, but the
-                  majority have suffered alteration in <br /> some form, by
-                  injected humour words which do not look even slightly
-                  believable.
-                </p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
       {/* <div className="best-price-section mb-0">

@@ -29,7 +29,7 @@ const page = async ({ params }: PageProps) => {
     <div>
       <BreadCumb
         bgimg={destinationData?.bigImg || ""}
-        Title={destinationData ? destinationData.name : "Destination Details"}
+        Title={destinationData ? destinationData.slogan : "Destination Details"}
       ></BreadCumb>
 
       <DestinationDetails destination={destinationData}></DestinationDetails>
