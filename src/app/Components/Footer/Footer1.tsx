@@ -11,7 +11,7 @@ const Footer1 = () => {
   return (
     <footer
       className="footer-section fix bg-cover"
-      data-background="/assets/img/footer/footer-bg.jpg"
+      data-background="bg-gray-700/80"
     >
       <div className="container">
         <div className="footer-widget-wrapper-new">
