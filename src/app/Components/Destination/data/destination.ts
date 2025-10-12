@@ -2,6 +2,7 @@
 const destinations = {
   Azija: [
     {
+      tag: "Maldives",
       name: "Maldivi",
       img: "/assets/Images/Maldives/1.jpg",
       bigImg: "/assets/Images/Maldives/2.jpg",
@@ -362,7 +363,8 @@ const destinations = {
     },
 
     {
-      name: `Maldivi-Exclusive`,
+      tag: "Maldives Exclusive",
+      name: `Maldivi Exclusive`,
       img: "/assets/Images/Maldives/8.jpg",
       bigImg: "/assets/Images/Maldives/12.jpg",
       slogan: "Maldivi Exclusive - VILLA PARK SUN ISLAND 5* Resort",
@@ -481,6 +483,7 @@ const destinations = {
     },
 
     {
+      tag: "Dubai",
       name: "Dubai",
       img: "/assets/Images/Dubai/1.jpg",
       bigImg: "/assets/Images/Dubai/2.jpg",
@@ -599,6 +602,7 @@ const destinations = {
     },
 
     {
+      tag: "China",
       name: "Kina i Vijetnam",
       img: "/assets/Images/China/1.jpg",
       bigImg: "/assets/Images/China/2.jpg",
@@ -810,6 +814,7 @@ const destinations = {
     },
 
     {
+      tag: "Thailand",
       name: "Tajland - Krabi i Puket",
       img: "/assets/Images/Thailand/1.jpg",
       bigImg: "/assets/Images/Thailand/2.jpg",
@@ -1009,9 +1014,10 @@ const destinations = {
     },
 
     {
+      tag: "Bangkok",
       name: "Tajland",
-      img: "",
-      bigImg: "",
+      img: "/assets/Images/Thailand/1.jpg",
+      bigImg: "/assets/Images/Thailand/2.jpg",
       slogan: "Tajland - Bangkok, Krabi i Puket",
       about: `Da li ste spremni za najbolji aranžman u kome ćete obići najpopularnije destinacije na Tajlandu? Ovo je zemlja koja očarava svojim ostrvima, nebeskim plažama i živopisnom kulturom. Krećemo na nezaboravno putovanje ispunjeno avanturom, relaksacijom i otkrivanjem skrivenih dragulja ovog tropskog raja.
   
@@ -1270,6 +1276,7 @@ const destinations = {
     },
 
     {
+      tag: "Japan",
       name: "Japan Proleće - Tokio i Osaka",
       img: "/assets/Images/Japan/1.jpg",
       bigImg: "/assets/Images/Japan/2.jpg",
@@ -1507,9 +1514,10 @@ const destinations = {
     },
 
     {
+      tag: "Philippines",
       name: "Filipini i Hong Kong - Cebu, Borakaj",
-      img: "/assets/Images/Filipines/1.jpg",
-      bigImg: "/assets/Images/Filipines/2.jpg",
+      img: "/assets/Images/Philippines/1.jpg",
+      bigImg: "/assets/Images/Philippines/2.jpg",
       slogan: "Filipini i Hong Kong - Cebu, Borakaj",
       about: `Ovaj vodič vas vodi na uzbudljivo putovanje kroz dve od najživopisnijih i najdinamičnijih destinacija Azije. Prvo ćete istražiti Hong Kong, metropolu punu kontrasta, gde će vas osvajati vertikalni pejzaži sa Victoria Peakom, šarene ulice Kowloona i gurmanska scena prepuna ukusnih jela. Posetićete i Makao, gde se staro i novo dodiruju kroz autentične pešačke ulice i kolonijalnu arhitekturu.  
   
@@ -1708,8 +1716,9 @@ const destinations = {
     },
 
     {
+      tag: "BaliSGKL",
       name: "Bali, Singapur, Kuala Lumpur",
-      img: "",
+      img: "/assets/Images/Bali/5.jpg",
       bigImg: "/assets/Images/Bali/2.jpg",
       slogan: "Bali, Singapur, Kuala Lumpur",
       about: `Pripremite se za nezaboravno putovanje koje će vas odvesti kroz tri fascinantne zemlje! Jungle Tribe je organizovao avanturu koja obuhvata Singapur, Indoneziju i Maleziju, sa ciljem da upoznate kulturu, prirodu i posebne znamenitosti ovih destinacija.  
@@ -1878,7 +1887,12 @@ const destinations = {
       ],
       notIncluded: [""],
       media: {
-        images: ["#", "#"],
+        images: [
+          "/assets/Images/Bali/2.jpg",
+          "/assets/Images/Bali/3.jpg",
+          "/assets/Images/Bali/4.jpg",
+          "/assets/Images/Bali/5.jpg",
+        ],
         videos: ["#"],
       },
       usefulInfo: "",
@@ -1886,10 +1900,11 @@ const destinations = {
     },
 
     {
+      tag: "BSGKL",
       name: "Bali, Singapur, Kuala Lumpur",
-      img: "",
-      bigImg: "",
-      slogan: "",
+      img: "/assets/Images/Bali/3.jpg",
+      bigImg: "/assets/Images/Bali/8.jpg",
+      slogan: "Bali Navali",
       about: `Pripremite se za putovanje iz snova! Jungle Tribe organizovao je spektakularnu avanturu kroz tri fascinantne zemlje i četiri destinacije. Krenimo od glamuroznog Singapura, grada-države poznatog po impresivnom horizontu, modernoj infrastrukturi i kulturnoj raznolikosti. Zajedno s veselim plemenom, istražićemo mapu grada i otkriti njegove najpoznatije znamenitosti, sve uz večitu pogodnost vremenske prognoze.  
   
   Indonezija vas čeka svojom raznolikošću – Bali, ostrvo poznato po prelepitim plažama i živopisnoj kulturi, pružiće vam nezaboravna iskustva. Uključujući posete Ubudu i Legijanu, uživaćete u trekingu kroz pirinčana polja, isprobavanju lokalne hrane i otkrivanju prirodnih lepota.  
@@ -2083,51 +2098,11 @@ const destinations = {
     },
   ],
 
-  Evropa: [
-    {
-      name: "Spanija",
-      img: "https://fastly.picsum.photos/id/835/1920/410.jpg?hmac=eVALUq6OCLB6VZMP-eyUXjlIiXQp8hS57wIXH-xrwPU",
-      bigImg:
-        "https://fastly.picsum.photos/id/835/1920/410.jpg?hmac=eVALUq6OCLB6VZMP-eyUXjlIiXQp8hS57wIXH-xrwPU",
-      about: "Spanija is known for barcelona",
-      planProgram: [
-        {
-          day: 1,
-          title: "Arrival in N'Djamena",
-          details: "Transfer to hotel, orientation, dinner.",
-        },
-        {
-          day: 2,
-          title: "Lake Chad Tour",
-          details: "Boat excursion and visit local villages.",
-        },
-        // ... add more days
-      ],
-      departures: [
-        { date: "2025-03-10", price: "1550€" },
-        { date: "2025-05-22", price: "2350€" },
-      ],
-      included: [
-        "Poseta na camp nou",
-        "4-star hotel accommodation",
-        "Breakfast and dinner",
-        "Local guided tours",
-      ],
-      media: {
-        images: [
-          "/assets/img/destination/africa/chad-1.jpg",
-          "/assets/img/destination/africa/chad-2.jpg",
-        ],
-        videos: [
-          "https://www.youtube.com/watch?v=xxxx",
-          "https://vimeo.com/xxxx",
-        ],
-      },
-    },
-  ],
+  Evropa: [],
 
   Afrika: [
     {
+      tag: "Mauritius",
       name: "Mauricijus",
       img: "/assets/Images/Mauritius/main.jpg",
       bigImg: "/assets/Images/Mauritius/bigImg.jpg",
@@ -2287,6 +2262,7 @@ Uključena je avio karta sa svim taksama i presedanjem, u ekonomskoj klasi, sa 2
     },
 
     {
+      tag: "Seychelles",
       name: "Sejšeli",
       img: "/assets/Images/Seychelles/img.jpg",
       bigImg: "/assets/Images/Seychelles/bigImg.jpg",

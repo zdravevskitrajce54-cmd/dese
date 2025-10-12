@@ -1,4 +1,5 @@
 export interface Destination {
+  tag: string;
   name: string;
   img: string; // small preview
   bigImg: string;

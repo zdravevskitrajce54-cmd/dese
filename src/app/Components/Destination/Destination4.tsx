@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import destinations from "../Destination/data/destination"; // adjust path if needed
@@ -46,21 +45,21 @@ const Destination4 = () => {
                       </ul>
                       <h5>
                         <Link
-                          href={`/destination/${place.name
+                          href={`/destination/${place.tag
                             .toLowerCase()
                             .replace(/\s+/g, "-")}`}
                         >
-                          Explore {place.name}
+                          Upoznaj {place.name}
                         </Link>
                       </h5>
                       <div className="price">
                         <Link
-                          href={`/destination/${place.name
+                          href={`/destination/${place.tag
                             .toLowerCase()
                             .replace(/\s+/g, "-")}`}
                           className="theme-btn style-2"
                         >
-                          Book Now<i className="bi bi-arrow-right"></i>
+                          Vidi vise<i className="bi bi-arrow-right"></i>
                         </Link>
                       </div>
                     </div>

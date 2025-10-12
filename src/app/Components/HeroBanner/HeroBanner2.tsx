@@ -13,6 +13,8 @@ const HeroBanner2 = () => {
     "/assets/Images/Bali/1.jpg",
     "/assets/Images/Maldives/11.jpg",
     "/assets/Images/Colombia/2.jpg",
+    "/assets/Images/Japan/2.jpg",
+    "/assets/Images/Zanzibar/2.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,23 +44,26 @@ const HeroBanner2 = () => {
               style={{ backgroundImage: `url(${src})` }}
             >
               {/* Dark overlay */}
-              <div className="w-full h-full bg-black/40 flex items-center">
-                <div className="container custom-container-3 text-white">
+              <div className="w-full h-full bg-black/40 flex items-center text-gray-300/90">
+                <div className="container custom-container-3">
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="hero-content">
-                        <div className="sub-title">
+                        <div className="sub-title wow fadeInUp">
                           Doživite nezaboravno zadovoljstvo sa nama
                         </div>
-                        <h1 className="mt-4 text-4xl font-bold leading-tight">
+                        <h1
+                          className="wow fadeInUp text-white"
+                          data-wow-delay=".3s"
+                        >
                           Otkrijte svoje sledeće <br />
                           pažljivo odabrano putovanje
                         </h1>
-                        <p className="mt-4 text-lg">
-                          There are many variations of passages available, but
-                          the majority have suffered alteration in some form, by
-                          injected humour words which do not look even slightly
-                          believable.
+                        <p className="wow fadeInUp" data-wow-delay=".5s">
+                          There are many variations of passages of available,
+                          but the majority have suffered alteration in <br />{" "}
+                          some form, by injected humour words which do not look
+                          even slightly believable.
                         </p>
                       </div>
                     </div>

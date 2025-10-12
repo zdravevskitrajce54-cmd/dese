@@ -9,7 +9,7 @@ interface PageProps {
 
 const page = async ({ params }: PageProps) => {
   const resolvedParams = await params;
-  const destinationName = decodeURIComponent(
+  const destinationTag = decodeURIComponent(
     resolvedParams["destination-details"]
   );
 
@@ -17,19 +17,19 @@ const page = async ({ params }: PageProps) => {
   let destinationData = null;
   for (const category in destinations) {
     const found = destinations[category as keyof typeof destinations].find(
-      (dest) => dest.name.toLowerCase() === destinationName.toLowerCase()
+      (dest) => dest.tag.toLowerCase() === destinationTag.toLowerCase()
     );
     if (found) {
       destinationData = found;
       break;
     }
   }
-
+  console.log(destinationData);
   return (
     <div>
       <BreadCumb
         bgimg={destinationData?.bigImg || ""}
-        Title={destinationData ? destinationData.slogan : "Destination Details"}
+        Title={destinationData ? destinationData.name : "Destination Details"}
       ></BreadCumb>
 
       <DestinationDetails destination={destinationData}></DestinationDetails>

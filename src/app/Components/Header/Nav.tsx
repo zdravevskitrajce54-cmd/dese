@@ -4,7 +4,6 @@ import DestinationsDropdown from "./DestinationDropdown";
 import { Key, useState } from "react";
 
 import destinations from "../Destination/data/destination"; // adjust path if needed
-console.log(destinations);
 
 export default function Nav({ setMobileToggle }) {
   const continents = Object.keys(destinations);
@@ -43,15 +42,18 @@ export default function Nav({ setMobileToggle }) {
               {/* Right column - Countries */}
               <div className="w-[600px] h-auto text-gray-900 grid grid-cols-4 auto-rows-min gap-0.5 text-xs overflow-y-auto">
                 {destinations[activeContinent].map(
-                  (country: { name: any }, i: Key) => {
+                  (country: { name: any; tag: any }, i: Key) => {
                     // Handle both string and object formats
                     const countryName =
                       typeof country === "string" ? country : country.name;
 
+                    const countryTag =
+                      typeof country === "string" ? country : country.tag;
+
                     return (
                       <div key={i}>
                         <Link
-                          href={`/destination/${countryName
+                          href={`/destination/${countryTag
                             .toLowerCase()
                             .replace(/\s+/g, "-")}`}
                           className="block px-2 py-1 text-sm hover:text-green-600 hover:bg-[#1ca8cb]/20 rounded"

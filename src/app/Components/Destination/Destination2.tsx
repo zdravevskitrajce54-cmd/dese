@@ -3,33 +3,44 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
+import destinations from "./data/destination";
+
+// helper function to get random items from array
+function getRandomItems<T>(arr: T[], num: number): T[] {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, num);
+}
 
 const Destination2 = () => {
-  const destinationContent = [
-    {
-      img: "/assets/img/destination/new/01.jpg",
-      name: "Egipat",
-      location: "Tanzania",
-      title: "$399",
-      link: "www.whop.com",
-    },
-    {
-      img: "/assets/img/destination/new/02.jpg",
-      name: "cad",
-      location: "Tajland",
-      title: "Hotel 1",
-    },
-    {
-      img: "/assets/img/destination/new/03.jpg",
-      location: "Dubai",
-      title: "Vec od 499€",
-    },
-    {
-      img: "/assets/img/destination/new/04.jpg",
-      location: "Singapur & Bali",
-      title: "Hotel 1",
-    },
-  ];
+  // const destinationContent = [
+  //   {
+  //     img: "/assets/img/destination/new/01.jpg",
+  //     name: "Egipat",
+  //     location: "Tanzania",
+  //     title: "$399",
+  //     link: "www.whop.com",
+  //   },
+  //   {
+  //     img: "/assets/img/destination/new/02.jpg",
+  //     name: "cad",
+  //     location: "Tajland",
+  //     title: "Hotel 1",
+  //   },
+  //   {
+  //     img: "/assets/img/destination/new/03.jpg",
+  //     location: "Dubai",
+  //     title: "Vec od 499€",
+  //   },
+  //   {
+  //     img: "/assets/img/destination/new/04.jpg",
+  //     location: "Singapur & Bali",
+  //     title: "Hotel 1",
+  //   },
+  // ];
+
+  const destinationContent = Object.values(destinations).flatMap(
+    (continent) => getRandomItems(continent, 3) // change "2" to "3" if you want more
+  );
 
   const settings = {
     dots: false,
@@ -85,7 +96,7 @@ const Destination2 = () => {
                   <div key={i} className="swiper-slide">
                     <div className="new-destination-items">
                       <div className="thumb">
-                        <Image
+                        <img
                           src={item.img}
                           alt="img"
                           width={424}
@@ -94,14 +105,20 @@ const Destination2 = () => {
                         <div className="content">
                           <div className="title-text">
                             <h3>
-                              <Link href={`/destination/${item.name}`}>
-                                {item.location}
+                              <Link
+                                href={`/destination/${item.tag
+                                  .toLowerCase()
+                                  .replace(/\s+/g, "-")}`}
+                              >
+                                {item.name}
                               </Link>
                             </h3>
-                            <p>{item.title}</p>
+                            <p>{item.name}</p>
                           </div>
                           <Link
-                            href={`/destination/${item.name}`}
+                            href={`/destination/${item.tag
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`}
                             className="icon"
                           >
                             <i className="bi bi-arrow-right"></i>
