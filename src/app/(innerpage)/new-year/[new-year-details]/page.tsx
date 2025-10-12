@@ -9,7 +9,7 @@ interface PageProps {
   };
 }
 
-function NewYearDetails({ params }: PageProps) {
+function NewYearDetails({ params }: any) {
   // Convert the URL parameter back to the original tag format
   const destinationTag = params["new-year-details"]
     .split("-")
