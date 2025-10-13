@@ -1,8 +1,13 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
-import destinations from "../Destination/data/destination"; // adjust path if needed
+import { useSearchParams } from "next/navigation"; // to read ?from= query
+import destinations from "../Destination/data/destination"; // adjust path
 
 const Destination4 = () => {
+  const searchParams = useSearchParams();
+  const from = searchParams.get("from");
+
   return (
     <section className="popular-destination-section section-padding pb-0">
       <div className="car-shape float-bob-x">
@@ -14,61 +19,70 @@ const Destination4 = () => {
         />
       </div>
       <div className="container">
-        {Object.entries(destinations).map(([continent, places]) => (
-          <div key={continent} className="mb-10">
-            <h3 className="text-2xl font-semibold mb-4">{continent}</h3>
-            <div className="row g-4">
-              {places.map((place, i) => (
-                <div
-                  key={i}
-                  className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-                  data-wow-delay=".2s"
-                >
-                  <div className="destination-card-items mt-0">
-                    <div className="destination-image">
-                      <img
-                        src={place.img}
-                        alt={place.name}
-                        width={304}
-                        height={254}
-                      />
-                      <div className="heart-icon">
-                        <i className="bi bi-heart"></i>
+        {Object.entries(destinations).map(([continent, places]) => {
+          // if "from" exists, filter by it
+          const filteredPlaces = from
+            ? places.filter((place) => place.from === from)
+            : places;
+
+          if (filteredPlaces.length === 0) return null; // skip empty continents
+
+          return (
+            <div key={continent} className="mb-10">
+              <h3 className="text-2xl font-semibold mb-4">{continent}</h3>
+              <div className="row g-4">
+                {filteredPlaces.map((place, i) => (
+                  <div
+                    key={i}
+                    className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                    data-wow-delay=".2s"
+                  >
+                    <div className="destination-card-items mt-0">
+                      <div className="destination-image">
+                        <img
+                          src={place.img}
+                          alt={place.name}
+                          width={304}
+                          height={254}
+                        />
+                        <div className="heart-icon">
+                          <i className="bi bi-heart"></i>
+                        </div>
                       </div>
-                    </div>
-                    <div className="destination-content">
-                      <ul className="meta">
-                        <li>
-                          <i className="bi bi-geo-alt"></i>
-                          {place.name}
-                        </li>
-                      </ul>
-                      <h5>
-                        <Link
-                          href={`/destination/${place.tag
-                            .toLowerCase()
-                            .replace(/\s+/g, "-")}`}
-                        >
-                          Upoznaj {place.name}
-                        </Link>
-                      </h5>
-                      <div className="price">
-                        <Link
-                          href={`/destination/${place.tag
-                            .toLowerCase()
-                            .replace(/\s+/g, "-")}`}
-                          className="theme-btn style-2"
-                        >
-                          Vidi vise<i className="bi bi-arrow-right"></i>
-                        </Link>
+                      <div className="destination-content">
+                        <ul className="meta">
+                          <li>
+                            <i className="bi bi-geo-alt"></i>
+                            {place.name}
+                          </li>
+                        </ul>
+                        <h5>
+                          <Link
+                            href={`/destination/${place.tag
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`}
+                          >
+                            Upoznaj {place.name}
+                          </Link>
+                        </h5>
+                        <div className="price">
+                          <Link
+                            href={`/destination/${place.tag
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`}
+                            className="theme-btn style-2"
+                          >
+                            Vidi vise<i className="bi bi-arrow-right"></i>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

@@ -12,32 +12,6 @@ function getRandomItems<T>(arr: T[], num: number): T[] {
 }
 
 const Destination2 = () => {
-  // const destinationContent = [
-  //   {
-  //     img: "/assets/img/destination/new/01.jpg",
-  //     name: "Egipat",
-  //     location: "Tanzania",
-  //     title: "$399",
-  //     link: "www.whop.com",
-  //   },
-  //   {
-  //     img: "/assets/img/destination/new/02.jpg",
-  //     name: "cad",
-  //     location: "Tajland",
-  //     title: "Hotel 1",
-  //   },
-  //   {
-  //     img: "/assets/img/destination/new/03.jpg",
-  //     location: "Dubai",
-  //     title: "Vec od 499€",
-  //   },
-  //   {
-  //     img: "/assets/img/destination/new/04.jpg",
-  //     location: "Singapur & Bali",
-  //     title: "Hotel 1",
-  //   },
-  // ];
-
   const destinationContent = Object.values(destinations).flatMap(
     (continent) => getRandomItems(continent, 3) // change "2" to "3" if you want more
   );
@@ -96,7 +70,7 @@ const Destination2 = () => {
                   <div key={i} className="swiper-slide">
                     <div className="new-destination-items">
                       <div className="thumb">
-                        <img
+                        <Image
                           src={item.img}
                           alt="img"
                           width={424}

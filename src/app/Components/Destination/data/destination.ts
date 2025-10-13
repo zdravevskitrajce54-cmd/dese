@@ -2,8 +2,9 @@
 const destinations = {
   Azija: [
     {
+      from: "Sarajevo",
       tag: "Maldives",
-      name: "Maldivi",
+      name: "Maldivi Sarajevo test",
       img: "/assets/Images/Maldives/1.jpg",
       bigImg: "/assets/Images/Maldives/2.jpg",
       slogan: "Maldivi",
@@ -363,6 +364,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "Maldives Exclusive",
       name: `Maldivi Exclusive`,
       img: "/assets/Images/Maldives/8.jpg",
@@ -483,6 +485,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "Dubai",
       name: "Dubai",
       img: "/assets/Images/Dubai/1.jpg",
@@ -602,6 +605,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "China",
       name: "Kina i Vijetnam",
       img: "/assets/Images/China/1.jpg",
@@ -814,6 +818,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "Thailand",
       name: "Tajland - Krabi i Puket",
       img: "/assets/Images/Thailand/1.jpg",
@@ -1014,6 +1019,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "Bangkok",
       name: "Tajland",
       img: "/assets/Images/Thailand/1.jpg",
@@ -1276,6 +1282,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "Japan",
       name: "Japan Proleće - Tokio i Osaka",
       img: "/assets/Images/Japan/1.jpg",
@@ -1514,6 +1521,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "Philippines",
       name: "Filipini i Hong Kong - Cebu, Borakaj",
       img: "/assets/Images/Philippines/1.jpg",
@@ -1716,6 +1724,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "BaliSGKL",
       name: "Bali, Singapur, Kuala Lumpur",
       img: "/assets/Images/Bali/5.jpg",
@@ -1900,6 +1909,7 @@ const destinations = {
     },
 
     {
+      from: "Beograd",
       tag: "BSGKL",
       name: "Bali, Singapur, Kuala Lumpur",
       img: "/assets/Images/Bali/3.jpg",
@@ -2102,6 +2112,7 @@ const destinations = {
 
   Afrika: [
     {
+      from: "Beograd",
       tag: "Mauritius",
       name: "Mauricijus",
       img: "/assets/Images/Mauritius/main.jpg",
@@ -2262,6 +2273,7 @@ Uključena je avio karta sa svim taksama i presedanjem, u ekonomskoj klasi, sa 2
     },
 
     {
+      from: "Beograd",
       tag: "Seychelles",
       name: "Sejšeli",
       img: "/assets/Images/Seychelles/img.jpg",
