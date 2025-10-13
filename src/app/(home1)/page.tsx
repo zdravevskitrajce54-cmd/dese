@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import HeroBanner2 from "../Components/HeroBanner/HeroBanner2";
 import About2 from "../Components/About/About2";
 import Counter1 from "../Components/Counter/Counter1";
@@ -15,7 +15,9 @@ const page = () => {
   return (
     <div>
       <HeroBanner2></HeroBanner2>
-      <Destination2></Destination2>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Destination2></Destination2>
+      </Suspense>
       <About2></About2>
       <Counter1></Counter1>
       <Choose2></Choose2>
