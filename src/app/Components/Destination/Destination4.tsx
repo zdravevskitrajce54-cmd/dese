@@ -36,15 +36,13 @@ const Destination4 = () => {
       </div>
       <div className="container">
         {/* ORIGIN TABS */}
-        <div className="flex gap-4 mb-6">
+        <div className="flex gap-2 mb-3">
           {flightOrigins.map((origin) => (
             <button
               key={origin}
               onClick={() => setActiveOrigin(origin)}
-              className={`px-4 py-2 rounded ${
-                origin === activeOrigin
-                  ? "bg-blue-600 text-black"
-                  : "bg-gray-200 text-gray-800"
+              className={`px-4 font-medium transition-all border bg-gray-400 shadow-md border-gray-400 duration-300 ${
+                origin === activeOrigin ? "shadow-none" : "text-black"
               }`}
             >
               {origin}
@@ -53,16 +51,17 @@ const Destination4 = () => {
         </div>
 
         {/* CONTINENT TABS */}
-        <div className="flex gap-4 mb-10">
+        <div className="flex gap-3 mb-10">
           {continents.map((continent) => (
             <button
               key={continent}
               onClick={() => setActiveContinent(continent)}
-              className={`px-3 py-1 rounded ${
-                continent === activeContinent
-                  ? "bg-green-600 text-black"
-                  : "bg-gray-100 text-gray-700"
-              }`}
+              className={`px-4 py-2 font-medium transition-all border bg-gray-400 shadow-md border-gray-400 duration-300
+        ${
+          continent === activeContinent
+            ? "shadow-none"
+            : "text-black hover:bg-gray-200"
+        }`}
             >
               {continent}
             </button>

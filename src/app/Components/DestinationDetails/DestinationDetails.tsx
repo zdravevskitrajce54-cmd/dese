@@ -18,7 +18,6 @@ const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
   console.log("destination:", destination);
   return (
     <section className="destination-details-section fix section-padding">
-      {destination.origin}
       <div className="container">
         <div className="destination-details-wrapper">
           <div className="row g-4">
