@@ -5,16 +5,20 @@ import React from "react";
 import Slider from "react-slick";
 import destinations from "./data/destination";
 
-// helper function to get random items from array
+// Helper: get random items from array
 function getRandomItems<T>(arr: T[], num: number): T[] {
   const shuffled = [...arr].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, num);
 }
 
 const Destination2 = () => {
-  const destinationContent = Object.values(destinations).flatMap(
-    (continent) => getRandomItems(continent, 3) // change "2" to "3" if you want more
+  // 🔹 Flatten the nested structure: flightOrigin → continent → destinations
+  const allDestinations = Object.values(destinations).flatMap((originObj) =>
+    Object.values(originObj).flatMap((continentArray) => continentArray)
   );
+
+  // 🔹 Pick random destinations to show (e.g. 8 total)
+  const destinationContent = getRandomItems(allDestinations, 8);
 
   const settings = {
     dots: false,
@@ -27,24 +31,9 @@ const Destination2 = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     responsive: [
-      {
-        breakpoint: 1399,
-        settings: {
-          slidesToShow: 4,
-        },
-      },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1399, settings: { slidesToShow: 4 } },
+      { breakpoint: 1199, settings: { slidesToShow: 3 } },
+      { breakpoint: 575, settings: { slidesToShow: 1 } },
     ],
   };
 
@@ -54,7 +43,7 @@ const Destination2 = () => {
         <div className="section-title-area">
           <div className="section-title">
             <span className="sub-title wow fadeInUp">Naše destinacije</span>
-            <h2 className="wow fadeInUp wow" data-wow-delay=".5s">
+            <h2 className="wow fadeInUp" data-wow-delay=".5s">
               Naša najbolja lokacija za vas
             </h2>
           </div>
@@ -62,6 +51,7 @@ const Destination2 = () => {
             Vidi više <i className="bi bi-arrow-right"></i>
           </Link>
         </div>
+
         <div className="new-destination-wrapper">
           <div className="swiper new-destination-slider">
             <div className="swiper-wrapper cs_slider_gap_301">
@@ -69,16 +59,17 @@ const Destination2 = () => {
                 {destinationContent.map((item, i) => (
                   <div key={i} className="swiper-slide">
                     <div className="new-destination-items">
-                      <div className="thumb">
+                      <div className="thumb relative">
                         <Image
                           src={item.img}
-                          alt="img"
+                          alt={item.name}
                           width={424}
                           height={505}
+                          className="object-cover w-full h-[505px]"
                         />
-                        <div className="content">
+                        <div className="content absolute bottom-0 left-0 w-full p-4 bg-black/40 text-white">
                           <div className="title-text">
-                            <h3>
+                            <h3 className="text-lg font-semibold">
                               <Link
                                 href={`/destination/${item.tag
                                   .toLowerCase()
@@ -87,13 +78,17 @@ const Destination2 = () => {
                                 {item.name}
                               </Link>
                             </h3>
-                            <p>{item.name}</p>
+                            {item.from && (
+                              <p className="text-sm italic">
+                                Polazak iz {item.from}
+                              </p>
+                            )}
                           </div>
                           <Link
                             href={`/destination/${item.tag
                               .toLowerCase()
                               .replace(/\s+/g, "-")}`}
-                            className="icon"
+                            className="icon inline-block mt-2 text-xl text-white hover:text-[#1ca8cb]"
                           >
                             <i className="bi bi-arrow-right"></i>
                           </Link>

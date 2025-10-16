@@ -1,4 +1,7 @@
 export interface Destination {
+  from: string;
+  origin: string;
+  continent: string;
   tag: string;
   name: string;
   img: string; // small preview

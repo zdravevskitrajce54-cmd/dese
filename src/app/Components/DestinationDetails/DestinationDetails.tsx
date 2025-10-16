@@ -15,8 +15,10 @@ const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
     return <p>No destination selected</p>;
   }
 
+  console.log("destination:", destination);
   return (
     <section className="destination-details-section fix section-padding">
+      {destination.origin}
       <div className="container">
         <div className="destination-details-wrapper">
           <div className="row g-4">
@@ -26,7 +28,7 @@ const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
                 {/* {/* Hero image */}
                 <div className="details-image mb-4">
                   <img
-                    src={destination.img}
+                    src={destination.bigImg}
                     alt={destination.name}
                     width={856}
                     height={550}
