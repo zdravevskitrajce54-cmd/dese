@@ -343,7 +343,7 @@ const destinations = {
     {
       tag: "Colombia",
       name: "Kolumbija - Nova Godina",
-      img: "assets/Images/Colombia/5.jpg",
+      img: "/assets/Images/Colombia/5.jpg",
       bigImg: "/assets/Images/Colombia/1.jpg",
       slogan: "Colombia",
       about: `Želite da započnete 2026. godinu magično i potpuno drugačije? Pridružite nam se na nezaboravnom putovanju u Kolumbiju, zemlju bogate kulture, predivnih plaža i južnoameričke topline! Ovo je prilika da dočekate Novu godinu u zemlji kafe, uz prelepe znamenitosti i avanture koje će vam ostati u najlepšem sećanju.
@@ -517,8 +517,8 @@ const destinations = {
     {
       tag: "Japan",
       name: "Japan - Nova Godina",
-      img: "assets/Images/Japan/1.jpg",
-      bigImg: "assets/Images/Japan/5.jpg",
+      img: "/assets/Images/Japan/1.jpg",
+      bigImg: "/assets/Images/Japan/5.jpg",
       slogan: "Japanke",
       about: `Poslovite se od stare godine i uđite u novu u duhu japanske tradicije i modernosti! Naše nasmejano pleme vodi vas na nezaboravni doček Nove 2026. godine u Japanu, zemlji gde se isprepliću starodrevni obredi i najnaprednija tehnologija.  
   
@@ -674,8 +674,8 @@ const destinations = {
     {
       tag: "Zanzibar",
       name: "Zanzibar - Nova Godina",
-      img: "assets/Images/Zanzibar/1.jpg",
-      bigImg: "assets/Images/Zanzibar/5.jpg",
+      img: "/assets/Images/Zanzibar/1.jpg",
+      bigImg: "/assets/Images/Zanzibar/5.jpg",
       slogan: "Zanzibar za Novu Godinu",
       about: `Želite li da započnete 2026. godinu na način koji će vam ostati u najlepšem sećanju? Zanzibar je idealno odredište za nezaboran doček Nove! Ovaj čarobni ostrvski raj, smješten uz obalu Tanzanije, nudi spoj predivnih plaža, bogate kulture i vibrirajućih festivala za savršeno plaćanje ulaska u novu godinu. Saznajte zašto je proslava Nove na Zanzibaru iskustvo koje ne smete propustiti.
   
@@ -837,8 +837,8 @@ const destinations = {
     {
       tag: "Cuba",
       name: "Kuba - Nova Godina",
-      img: "#",
-      bigImg: "#",
+      img: "/assets/Images/Cuba/1.jpg",
+      bigImg: "/assets/Images/Cuba/5.jpg",
       slogan: "Kuba - Havana, Trinidad, Varadero",
       about: `Ovaj jedinstveni aranžman pruža vam priliku da doživite pravi duh Kube, od istorijskih i kulturnih znamenitosti do svakodnevnog života i egzotičnih pejzaža. Početak je u Havani, gde ćete boraviti u casas particulares, učiti španski, upoznavati bogatu istoriju i šarenilo kolonijalnih ulica, sve to uz zvuke salse i vožnju u šarenim oldajmerima.  
   
@@ -1015,8 +1015,8 @@ const destinations = {
     {
       tag: "Singapore",
       name: "Singapur, Bali, Kuala Lumpur - Nova Godina",
-      img: "#",
-      bigImg: "#",
+      img: "/assets/Images/nema.png",
+      bigImg: "/assets/Images/nema.png",
       slogan: " Singapur, Bali, Kuala Lumpur - Nova Godina ",
       about: `Pripremite se za spektakularan doček Nove 2026 godine uz Exodus Travel! Naša avantura započinje u čarobnom Singapuru, gradu-državi koja pruža jedinstveno iskustvo, spoj savremene arhitekture, zelene urbane oaze i egzotičnih tržnica. Zajedno sa našim veselim društvom, istražićemo svaki kutak ovog uzbudljivog grada, uz savršeno vreme koje će nam biti na voljo.
   
@@ -1190,8 +1190,8 @@ const destinations = {
     {
       tag: "SriLanka",
       name: "Šri Lanka - Nova Godina",
-      img: "#",
-      bigImg: "#",
+      img: "/assets/Images/nema.png",
+      bigImg: "/assets/Images/nema.png",
       slogan: " Šri Lanka - Nova Godina",
       about: `Sanjate o avanturi koja će vas odvesti u srcce egzotične i mistične Šri Lanke? Pripremili smo za vas nezaboravno putovanje koje će spojiti prirodu, kulturu, istoriju i neizbrisive doživljaje!  
   

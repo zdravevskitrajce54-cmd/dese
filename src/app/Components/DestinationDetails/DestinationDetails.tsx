@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import { useState } from "react";
 import { Destination } from "../../../types/destination"; // adjust path if you separate interfaces
 
@@ -26,7 +27,7 @@ const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
               <div className="destination-details-items">
                 {/* {/* Hero image */}
                 <div className="details-image mb-4">
-                  <img
+                  <Image
                     src={destination.bigImg}
                     alt={destination.name}
                     width={856}
@@ -139,7 +140,7 @@ const DestinationDetails = ({ destination }: DestinationDetailsProps) => {
                     <div className="row g-3">
                       {destination.media.images.map((img, idx) => (
                         <div className="col-md-6" key={idx}>
-                          <img
+                          <Image
                             src={img}
                             alt={`${destination.name} photo ${idx + 1}`}
                             width={416}

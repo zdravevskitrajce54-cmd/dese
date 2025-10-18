@@ -35,15 +35,12 @@ const Tour = () => {
                   >
                     <div className="destination-card-items mt-0">
                       <div className="destination-image">
-                        <img
+                        <Image
                           src={item.img}
                           alt={item.name}
                           width={287}
                           height={240}
                         />
-                        <div className="heart-icon">
-                          <i className="bi bi-heart"></i>
-                        </div>
                       </div>
                       <div className="destination-content">
                         <ul className="meta">

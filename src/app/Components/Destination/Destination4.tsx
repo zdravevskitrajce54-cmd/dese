@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import destinations from "../Destination/data/destination"; // adjust path
 
 const Destination4 = () => {
@@ -27,7 +28,7 @@ const Destination4 = () => {
   return (
     <section className="popular-destination-section section-padding pb-0">
       <div className="car-shape float-bob-x">
-        <img
+        <Image
           src="/assets/img/destination/car.png"
           alt="img"
           width={134}
@@ -78,7 +79,7 @@ const Destination4 = () => {
             >
               <div className="destination-card-items mt-0">
                 <div className="destination-image">
-                  <img
+                  <Image
                     src={place.img}
                     alt={place.name}
                     width={304}

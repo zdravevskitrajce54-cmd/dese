@@ -59,17 +59,16 @@ const Destination2 = () => {
                 {destinationContent.map((item, i) => (
                   <div key={i} className="swiper-slide">
                     <div className="new-destination-items">
-                      <div className="thumb relative">
+                      <div className="thumb">
                         <Image
                           src={item.img}
-                          alt={item.name}
+                          alt="img"
                           width={424}
                           height={505}
-                          className="object-cover w-full h-[505px]"
                         />
-                        <div className="content absolute bottom-0 left-0 w-full p-4 bg-black/40 text-white">
+                        <div className="content">
                           <div className="title-text">
-                            <h3 className="text-lg font-semibold">
+                            <h3>
                               <Link
                                 href={`/destination/${item.tag
                                   .toLowerCase()
@@ -78,6 +77,7 @@ const Destination2 = () => {
                                 {item.name}
                               </Link>
                             </h3>
+                            <p>{item.title}</p>
                             {item.from && (
                               <p className="text-sm italic">
                                 Polazak iz {item.from}
@@ -88,7 +88,7 @@ const Destination2 = () => {
                             href={`/destination/${item.tag
                               .toLowerCase()
                               .replace(/\s+/g, "-")}`}
-                            className="icon inline-block mt-2 text-xl text-white hover:text-[#1ca8cb]"
+                            className="icon"
                           >
                             <i className="bi bi-arrow-right"></i>
                           </Link>

@@ -23,14 +23,13 @@ const Choose2 = () => {
                     Zašto izabrati nas
                   </span>
                   <h2 className="wow fadeInUp wow" data-wow-delay=".3s">
-                    Dobijte najbolje iskustvo putovanja
+                    Najlakši put do tvoje destinacije iz snova
                   </h2>
                 </div>
                 <p className="wow fadeInUp wow" data-wow-delay=".3s">
-                  There are many variations of passages of available, but the
-                  majority have suffered alteration in <br /> some form, by
-                  injected humour words which do not look even slightly
-                  believable
+                  Naš cilj je da tvoje putovanje učinimo jednostavnim, sigurnim
+                  i bez stresa. Od prve rezervacije do povratka kući — sve je u
+                  našim rukama.
                 </p>
                 <div className="choose-us-area">
                   <div className="line-shape">
@@ -47,15 +46,11 @@ const Choose2 = () => {
                   >
                     <h3 className="number">01</h3>
                     <div className="content">
-                      <h4>
-                        Find ans enjoy a Trip that fits Your Lifestyle with{" "}
-                        <br />
-                        your Friends
-                      </h4>
+                      <h4>Brza i laka rezervacija</h4>
                       <p>
-                        Globally productize flexible potentialities via
-                        high-payoff markets. Proactively <br /> revolutionize
-                        parallel growth strategies.
+                        Samo par klikova te deli od tvoje destinacije.
+                        Rezervacija online je jednostavna i dostupna u svakom
+                        trenutku.
                       </p>
                     </div>
                   </div>
@@ -65,11 +60,11 @@ const Choose2 = () => {
                   >
                     <h3 className="number">02</h3>
                     <div className="content">
-                      <h4>Travel With More Confidence</h4>
+                      <h4>Sigurno plaćanje i viza bez brige</h4>
                       <p>
-                        Globally productize flexible potentialities via
-                        high-payoff markets. Proactively <br /> revolutionize
-                        parallel growth strategies.
+                        Plaćanje vršiš online, brzo i bezbedno. Vizu i svu
+                        potrebnu dokumentaciju rešava naša agencija — ti se samo
+                        pakuješ.
                       </p>
                     </div>
                   </div>
@@ -79,11 +74,10 @@ const Choose2 = () => {
                   >
                     <h3 className="number">03</h3>
                     <div className="content">
-                      <h4>See What you really Get form us</h4>
+                      <h4>Organizovan prevoz od-do</h4>
                       <p>
-                        Globally productize flexible potentialities via
-                        high-payoff markets. Proactively <br /> revolutionize
-                        parallel growth strategies.
+                        Transport od tvog doma do aerodroma i nazad je uvek
+                        organizovan. Putuj opušteno — mi mislimo na sve.
                       </p>
                     </div>
                   </div>

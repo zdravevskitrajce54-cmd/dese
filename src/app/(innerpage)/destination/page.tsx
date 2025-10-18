@@ -16,7 +16,7 @@ const page = () => {
       </Suspense>
 
       <Story1></Story1>
-      <FeaturedTour1></FeaturedTour1>
+      {/* <FeaturedTour1></FeaturedTour1> */}
     </div>
   );
 };
